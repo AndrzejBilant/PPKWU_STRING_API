@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController public class StringAnalyzer {
 
     @RequestMapping(path = "/analyseString")
-    public String analyseString(@RequestParam(value = "stringToanalyse", required = false) String input) {
+    public String analyseString(@RequestParam(value = "stringToAnalyse", required = false) String input) {
 
         String result = "In the input were:\n";
 
