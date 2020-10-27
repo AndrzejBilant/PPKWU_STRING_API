@@ -10,9 +10,7 @@ public class StringAnalyzer {
     @RequestMapping(path = "/analyseString")
     public String analyseString(@RequestParam(value = "stringToanalyse", required = false)String input){
 
-        StringBuilder result = new StringBuilder();
-
-        result.append("In the input were:\n");
+        String result = "In the input were:\n";
 
         char[] chars = input.toCharArray();
 
@@ -33,7 +31,7 @@ public class StringAnalyzer {
             }
         }
 
-        return result.toString();
+        return result;
     }
 
 }
