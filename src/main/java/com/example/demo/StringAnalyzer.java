@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
     @RequestMapping(path = "/analyseString")
     public String analyseString(@RequestParam(value = "stringToAnalyse", required = false) String input) {
 
-        String result = "In the input were:\n";
+        String result = "In the input were:<br>";
 
         char[] chars = input.toCharArray();
 
@@ -29,16 +29,16 @@ import org.springframework.web.bind.annotation.RestController;
         }
 
         if (numbers > 0) {
-            result += numbers + " numbers";
+            result += numbers + " numbers<br>";
         }
         if (lowerCase > 0) {
-            result += lowerCase + " lowercase";
+            result += lowerCase + " lowercase<br>";
         }
         if (upperCase > 0) {
-            result += upperCase + " uppercase";
+            result += upperCase + " uppercase<br>";
         }
         if (specialSings > 0) {
-            result += specialSings + " special sings";
+            result += specialSings + " special sings<br>";
         }
 
         return result;
