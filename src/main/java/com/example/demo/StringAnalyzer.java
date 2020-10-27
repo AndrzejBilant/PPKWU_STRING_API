@@ -4,11 +4,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-@RestController
-public class StringAnalyzer {
+@RestController public class StringAnalyzer {
 
     @RequestMapping(path = "/analyseString")
-    public String analyseString(@RequestParam(value = "stringToanalyse", required = false)String input){
+    public String analyseString(@RequestParam(value = "stringToanalyse", required = false) String input) {
 
         String result = "In the input were:\n";
 
@@ -16,17 +15,15 @@ public class StringAnalyzer {
 
         int upperCase = 0, lowerCase = 0, numbers = 0, specialSings = 0;
 
-        for(char c : chars){
+        for (char c : chars) {
 
-            if(Character.isDigit(c)){
+            if (Character.isDigit(c)) {
                 numbers++;
-            }
-            else if(Character.isUpperCase(c)){
+            } else if (Character.isUpperCase(c)) {
                 upperCase++;
-            }
-            else if(Character.isLowerCase(c)){
+            } else if (Character.isLowerCase(c)) {
                 lowerCase++;
-            }else{
+            } else {
                 specialSings++;
             }
         }
