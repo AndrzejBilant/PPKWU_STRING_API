@@ -28,6 +28,19 @@ import org.springframework.web.bind.annotation.RestController;
             }
         }
 
+        if (numbers > 0) {
+            result += numbers + " numbers";
+        }
+        if (lowerCase > 0) {
+            result += lowerCase + " lowercase";
+        }
+        if (upperCase > 0) {
+            result += upperCase + " uppercase";
+        }
+        if (specialSings > 0) {
+            result += specialSings + " special sings";
+        }
+
         return result;
     }
 
